@@ -40,7 +40,7 @@ private static void encode() {
         for (int i = 0; i < length; i++) {
             //берем остаток от деления на два (младший бит)
             //и выполняем XOR с исходящим битом
-            codeBit ^= product % 2;
+            codeBit ^= product & 0x1;
             //cдвигаем 4ку бит на 1
             product >>= 1;
         }
